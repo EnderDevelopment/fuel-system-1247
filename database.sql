@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `vehicle_fuel` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `plate` VARCHAR(255) NOT NULL,
+    `fuel` INT NOT NULL DEFAULT 100,
+    `last_updated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO `vehicle_fuel` (`plate`, `fuel`) VALUES
+    ('ABC123', 100),
+    ('XYZ789', 100);
